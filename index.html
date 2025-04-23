@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myntra - E-Commerce</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Myntra</div>
+    <div class="cart" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)</div>
+  </nav>
+
+  <!-- Product Listings -->
+  <section id="products" class="products">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/150" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>$25.99</p>
+      <button onclick="addToCart('Product 1', 25.99)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/150" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>$45.99</p>
+      <button onclick="addToCart('Product 2', 45.99)">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/150" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>$60.99</p>
+      <button onclick="addToCart('Product 3', 60.99)">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+      <h3>Your Cart</h3>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="total-price">0.00</span></p>
+      <button onclick="clearCart()">Clear Cart</button>
+      <button onclick="closeCart()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
